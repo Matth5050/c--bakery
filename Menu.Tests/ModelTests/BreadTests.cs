@@ -25,14 +25,14 @@ namespace Bread.Tests
     }
 
     [TestMethod]
-    public void SetDescription_SetDescription_20()
+    public void SetOrderAmount_SetOrderAmountToNewValue_20()
     {
-      int description = 5;
-      BreadOrders newOrder = new BreadOrders(description);
-      int updateDescription = 20;
-      newOrder.OrderAmount = updateDescription;
+      int orderedAmount = 5;
+      BreadOrders newOrder = new BreadOrders(orderedAmount);
+      int updateOrdredAmount = 20;
+      newOrder.OrderAmount = updateOrdredAmount;
       int result = newOrder.OrderAmount;
-      Assert.AreEqual(updateDescription, result);
+      Assert.AreEqual(updateOrdredAmount, result);
     }
 
     [TestMethod]
