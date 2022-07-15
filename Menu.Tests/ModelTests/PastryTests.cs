@@ -41,21 +41,30 @@ namespace Pastry.Tests
       Assert.AreEqual(4, newOrder.Bill);
     }
 
-    // [TestMethod]
-    // public void SumPrice_SetsFinalPrice_int()
-    // {
-    //   BreadOrders newOrder = new BreadOrders(2);
-    //   newOrder.SumPrice();
-    //   Assert.AreEqual(10, newOrder.FinalPrice);
-    // }
+    [TestMethod]
+    public void SumPrice_SetsFinalPrice_int()
+    {
+      PastryOrders newOrder = new PastryOrders(4);
+      newOrder.SumPrice();
+      Assert.AreEqual(8, newOrder.FinalPrice);
+    }
 
-    // [TestMethod]
-    // public void CheckDiscount_ChecksIfDivisbileByThree_int()
-    // {
-    //   BreadOrders newOrder = new BreadOrders(3);
-    //   newOrder.SumPrice();
-    //   newOrder.CheckDiscount();
-    //   Assert.AreEqual(10, newOrder.FinalPrice);
-    // }
+    [TestMethod]
+    public void CheckDiscount_ChecksIfOrderUnderFive_5()
+    {
+      PastryOrders newOrder = new PastryOrders(3);
+      newOrder.SumPrice();
+      newOrder.CheckDiscount();
+      Assert.AreEqual(5, newOrder.FinalPrice);
+    }
+
+    [TestMethod]
+    public void CheckDiscount_ChecksIfOrderOverFive_14()
+    {
+      PastryOrders newOrder = new PastryOrders(8);
+      newOrder.SumPrice();
+      newOrder.CheckDiscount();
+      Assert.AreEqual(14, newOrder.FinalPrice);
   }
+}
 }
