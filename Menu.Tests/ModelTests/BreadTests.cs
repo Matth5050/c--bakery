@@ -51,6 +51,14 @@ namespace Bread.Tests
     }
 
     [TestMethod]
+    public void SumPrice_SetsFinalPrice_int()
+    {
+      BreadOrders newOrder = new BreadOrders(2);
+      newOrder.SumPrice();
+      Assert.AreEqual(10, newOrder.FinalPrice);
+    }
+
+    [TestMethod]
     public void CheckDiscount_ChecksIfDivisbileByThree_int()
     {
       BreadOrders newOrder = new BreadOrders(3);
