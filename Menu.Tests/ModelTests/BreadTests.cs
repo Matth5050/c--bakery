@@ -16,7 +16,7 @@ namespace Bread.Tests
     }
 
     [TestMethod]
-    public void GetOrderAmount_ReturnsNumberOfLoaves_int()
+    public void GetOrderAmount_ReturnsNumberOfLoaves_3()
     {
       int testOrder = 3;
       BreadOrders newBill = new BreadOrders(testOrder);
@@ -25,7 +25,7 @@ namespace Bread.Tests
     }
 
     [TestMethod]
-    public void SetDescription_SetDescription_int()
+    public void SetDescription_SetDescription_20()
     {
       int description = 5;
       BreadOrders newOrder = new BreadOrders(description);
@@ -36,14 +36,14 @@ namespace Bread.Tests
     }
 
     [TestMethod]
-    public void SumPrice_SumsTotalPrice_int()
+    public void SumPrice_SumsTotalPrice_15()
     {
       BreadOrders newOrder = new BreadOrders(3);
       Assert.AreEqual(15, newOrder.SumPrice());
     }
 
     [TestMethod]
-    public void SumPrice_SetsBill_int()
+    public void SumPrice_SetsBill_10()
     {
       BreadOrders newOrder = new BreadOrders(2);
       newOrder.SumPrice();
@@ -51,7 +51,7 @@ namespace Bread.Tests
     }
 
     [TestMethod]
-    public void SumPrice_SetsFinalPrice_int()
+    public void SumPrice_SetsFinalPrice_10()
     {
       BreadOrders newOrder = new BreadOrders(2);
       newOrder.SumPrice();
@@ -59,7 +59,7 @@ namespace Bread.Tests
     }
 
     [TestMethod]
-    public void CheckDiscount_ChecksIfDivisbileByThree_int()
+    public void CheckDiscount_ChecksIfDivisbileByThree_10()
     {
       BreadOrders newOrder = new BreadOrders(3);
       newOrder.SumPrice();
