@@ -26,9 +26,13 @@ namespace Pastry.Models
 
     public void CheckDiscount()
     {
-      if (OrderAmount <= 5) 
+      if (OrderAmount == 1) 
       {
-        FinalPrice = (Bill -1);
+        FinalPrice = 2;
+      }
+      else if (OrderAmount > 1 && OrderAmount <= 5)
+      {
+        FinalPrice = (Bill - 1);
       }
       else if (OrderAmount > 5)
       {
