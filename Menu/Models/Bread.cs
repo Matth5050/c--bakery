@@ -1,26 +1,22 @@
+using System;
 using System.Collections.Generic;
 
-namespace ToDoList.Models
+namespace Bread.Models
 {
-  public class Item
+  public class BreadOrders
   {
-    public string Description { get; set; }
-    public static List<Item> GetAll()
+    public int OrderAmount { get; set; }
+    // public int Bill { get; set; }
+    
+    public BreadOrders(int orderedAmount)
     {
-      return _instances;
+      OrderAmount = orderedAmount;
     }
 
-    public static void ClearAll()
+    public int SumPrice()
     {
-      _instances.Clear();
-    }
-
-    private static List<Item> _instances = new List<Item> {};
-    // constructor
-    public Item(string description)
-    {
-      Description = description;
-      _instances.Add(this);
+      int summedPrice = OrderAmount * 5;
+      return summedPrice;
     }
   }
 }
