@@ -26,12 +26,12 @@ namespace Pastry.Tests
       Assert.AreEqual(updateOrdredAmount, result);
     }
 
-    // [TestMethod]
-    // public void SumPrice_SumsTotalPrice_int()
-    // {
-    //   BreadOrders newOrder = new BreadOrders(3);
-    //   Assert.AreEqual(15, newOrder.SumPrice());
-    // }
+    [TestMethod]
+    public void SumPrice_SumsTotalPrice_int()
+    {
+      PastryOrders newOrder = new PastryOrders(1);
+      Assert.AreEqual(2, newOrder.SumPrice());
+    }
 
     // [TestMethod]
     // public void SumPrice_SetsBill_int()
