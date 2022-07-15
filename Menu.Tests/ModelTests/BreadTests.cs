@@ -25,7 +25,7 @@ namespace Bread.Tests
     }
 
     [TestMethod]
-    public void SetDescription_SetDescription_String()
+    public void SetDescription_SetDescription_int()
     {
       int description = 5;
       BreadOrders newOrder = new BreadOrders(description);
@@ -34,5 +34,14 @@ namespace Bread.Tests
       int result = newOrder.OrderAmount;
       Assert.AreEqual(updateDescription, result);
     }
+
+    [TestMethod]
+    public void SumPrice_SumsTotalPrice_int()
+    {
+      BreadOrders newOrder = new BreadOrders(3);
+      Assert.AreEqual(15, newOrder.SumPrice());
+    }
   }
 }
+
+
