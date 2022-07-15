@@ -8,41 +8,31 @@ namespace Bread.Tests
   [TestClass]
   public class BreadTests
   {
-
     [TestMethod]
-    public void BreadInvoiceConstructor_CreatesInstanceOfItem_BreadInvoice()
+    public void BreadOrdersConstructor_CreatesInstanceOfItem_BreadOrders()
     {
       BreadOrders newBill = new BreadOrders(5);
       Assert.AreEqual(typeof(BreadOrders), newBill.GetType());
     }
 
-    // [TestMethod]
-    // public void GetDescription_ReturnsDescription_String()
-    // {
-    //   // Arrange
-    //   string description = "Walk the dog.";
-    //   Item newItem = new Item(description);
-    //   // Act
-    //   string result = newItem.Description;
-    //   // Assert
-    //   Assert.AreEqual(description, result);
-    // }
+    [TestMethod]
+    public void GetOrderAmount_ReturnsNumberOfLoaves_int()
+    {
+      int testOrder = 3;
+      BreadOrders newBill = new BreadOrders(testOrder);
+      int result = newBill.OrderAmount;
+      Assert.AreEqual(testOrder, result);
+    }
 
-    // [TestMethod]
-    // public void SetDescription_SetDescription_String()
-    // {
-    //   // Arrange
-    //   string description = "Walk the dog.";
-    //   Item newItem = new Item(description);
-
-    //   // Act
-    //   string updateDescription = "Do the dishes";
-    //   newItem.Description = updateDescription;
-    //   string result = newItem.Description;
-
-    //   // Assert
-    //   Assert.AreEqual(updateDescription, result);
-    // }
-
+    [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+      int description = 5;
+      BreadOrders newOrder = new BreadOrders(description);
+      int updateDescription = 20;
+      newOrder.OrderAmount = updateDescription;
+      int result = newOrder.OrderAmount;
+      Assert.AreEqual(updateDescription, result);
+    }
   }
 }
