@@ -27,43 +27,43 @@ namespace Pastry.Tests
     }
 
     [TestMethod]
-    public void SumPrice_SumsTotalPrice_int()
+    public void SumPastryPrice_SumsTotalPrice_int()
     {
       PastryOrders newOrder = new PastryOrders(1);
-      Assert.AreEqual(2, newOrder.SumPrice());
+      Assert.AreEqual(2, newOrder.SumPastryPrice());
     }
 
     [TestMethod]
-    public void SumPrice_SetsBill_int()
+    public void SumPastryPrice_SetsBill_int()
     {
       PastryOrders newOrder = new PastryOrders(2);
-      newOrder.SumPrice();
+      newOrder.SumPastryPrice();
       Assert.AreEqual(4, newOrder.Bill);
     }
 
     [TestMethod]
-    public void SumPrice_SetsFinalPrice_int()
+    public void SumPastryPrice_SetsFinalPrice_int()
     {
       PastryOrders newOrder = new PastryOrders(4);
-      newOrder.SumPrice();
+      newOrder.SumPastryPrice();
       Assert.AreEqual(8, newOrder.FinalPrice);
     }
 
     [TestMethod]
-    public void CheckDiscount_ChecksIfOrderUnderFive_5()
+    public void CheckPastryDiscount_ChecksIfOrderUnderFive_5()
     {
       PastryOrders newOrder = new PastryOrders(3);
-      newOrder.SumPrice();
-      newOrder.CheckDiscount();
+      newOrder.SumPastryPrice();
+      newOrder.CheckPastryDiscount();
       Assert.AreEqual(5, newOrder.FinalPrice);
     }
 
     [TestMethod]
-    public void CheckDiscount_ChecksIfOrderOverFive_14()
+    public void CheckPastryDiscount_ChecksIfOrderOverFive_14()
     {
       PastryOrders newOrder = new PastryOrders(8);
-      newOrder.SumPrice();
-      newOrder.CheckDiscount();
+      newOrder.SumPastryPrice();
+      newOrder.CheckPastryDiscount();
       Assert.AreEqual(14, newOrder.FinalPrice);
   }
 }
