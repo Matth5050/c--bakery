@@ -20,20 +20,24 @@ namespace Bread.Models
     {
       int summedPrice = OrderAmount * 5;
       Bill = summedPrice;
-      FinalPrice = summedPrice;
+      FinalPrice = 0;
       return summedPrice;
     }
 
     public void CheckDiscount()
     {
-      if (Bill % 3 == 0) 
+      for (int index = 0; index <= OrderAmount; index++) 
       {
-        FinalPrice = (Bill / 3) * 2;
-      }
-      else
-      {
-        FinalPrice = FinalPrice;
+        if (index % 3 == 0) 
+        {
+          FinalPrice += 0;
+        }
+        else
+        {
+          FinalPrice += 5;
+        }
       }
     }
   }
 }
+
