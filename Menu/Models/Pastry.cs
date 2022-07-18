@@ -16,7 +16,7 @@ namespace Pastry.Models
       FinalPrice = 0;
     }
 
-    public int SumPrice()
+    public int SumPastryPrice()
     {
       int summedPrice = OrderAmount * 2;
       Bill = summedPrice;
@@ -24,7 +24,7 @@ namespace Pastry.Models
       return summedPrice;
     }
 
-    public void CheckDiscount()
+    public void CheckPastryDiscount()
     {
       if (OrderAmount == 1) 
       {
