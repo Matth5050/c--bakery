@@ -51,20 +51,21 @@ namespace Bread.Tests
     }
 
     [TestMethod]
-    public void SumPrice_SetsFinalPrice_10()
-    {
-      BreadOrders newOrder = new BreadOrders(2);
-      newOrder.SumPrice();
-      Assert.AreEqual(10, newOrder.FinalPrice);
-    }
-
-    [TestMethod]
     public void CheckDiscount_ChecksIfDivisbileByThree_10()
     {
       BreadOrders newOrder = new BreadOrders(3);
       newOrder.SumPrice();
       newOrder.CheckDiscount();
       Assert.AreEqual(10, newOrder.FinalPrice);
+    }
+
+    [TestMethod]
+    public void CheckDiscount_ChecksIfLoopFunctions_15()
+    {
+      BreadOrders newOrder = new BreadOrders(4);
+      newOrder.SumPrice();
+      newOrder.CheckDiscount();
+      Assert.AreEqual(15, newOrder.FinalPrice);
     }
   }
 }
