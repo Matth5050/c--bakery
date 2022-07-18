@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Timers;
 using Bread.Models;
 using Pastry.Models;
+
 
 namespace Program.Models
 {
@@ -34,26 +36,15 @@ namespace Program.Models
         string pastryAmount = Console.ReadLine();
         int pastryAmountNum = int.Parse(pastryAmount);
         PastryOrders userOrderPastry = new PastryOrders(pastryAmountNum);
-        userOrderPastry.SumPrice();
-        userOrderPastry.CheckDiscount();
+        userOrderPastry.SumPastryPrice();
+        userOrderPastry.CheckPastryDiscount();
         Console.WriteLine("Your order of " + userOrderPastry.OrderAmount + " pastries" + " will be " + userOrderPastry.FinalPrice + "$");
       }
       else
       {
+        Console.WriteLine("Please enter either bread or pastries");
         Main();
       }
-
-
-      // int yearResponse = int.Parse(Console.ReadLine());
-
-      // Console.WriteLine("Please enter birth month");
-      // int monthResponse = int.Parse(Console.ReadLine());
-
-      // Birthday testBirth = new Birthday(yearResponse);
-      // Month testmonth = new Month(monthResponse);
-
-      // testBirth.age();
-      // testmonth.Ok(monthResponse);
     }
   }
 }
